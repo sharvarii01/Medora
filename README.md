@@ -29,7 +29,7 @@ To run the project locally:
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/yourusername/Medora.git
+   git clone https://github.com/sharvarii01/Medora
    cd Medora
    ```
 
@@ -42,19 +42,6 @@ To run the project locally:
    ```bash
    npm run dev
    ```
-
-## 🌐 Live Demo
-
-This project is deployed and automatically updated via Vercel. 
-Pushing to the `main` branch will automatically trigger a new deployment to the live URL!
-
 ## 📸 Screenshots
 
-*(Add screenshots of your Patient Dashboard, Live Queue, and Admin Panel here)*
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome!
-
----
-*Built with ❤️ for a better healthcare experience.*
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/d2e1c5e0-a43c-43c9-8a7f-7c3bc3449a51" />
