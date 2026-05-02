@@ -1,0 +1,82 @@
+/* ─── Scheduler Page ─── */
+.scheduler-page { padding: 2rem 0; }
+
+.scheduler-header { margin-bottom: 2rem; }
+.scheduler-header h1 { display: flex; align-items: center; gap: 0.75rem; font-size: 2rem; }
+.scheduler-header p { color: var(--text-muted); margin-top: 0.25rem; }
+
+/* Steps */
+.sched-steps {
+  display: flex; align-items: center; gap: 0; margin-bottom: 2rem;
+  background: var(--card-bg); border-radius: var(--radius-lg);
+  padding: 1rem 2rem; box-shadow: var(--shadow-sm); flex-wrap: wrap; gap: 1rem;
+}
+.sched-step { display: flex; align-items: center; gap: 0.6rem; flex: 1; }
+.sched-step-dot {
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 2px solid #e2e8f0; background: white;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.85rem; font-weight: 700; color: var(--text-muted);
+  transition: all var(--transition-fast); flex-shrink: 0;
+}
+.sched-step span { font-size: 0.9rem; color: var(--text-muted); font-weight: 500; }
+.sched-step.active .sched-step-dot { border-color: var(--primary-blue); background: var(--primary-blue); color: white; }
+.sched-step.active span { color: var(--primary-blue); font-weight: 700; }
+.sched-step.done .sched-step-dot { border-color: var(--success); background: var(--success); color: white; }
+.sched-step.done span { color: var(--success); }
+
+/* Layout */
+.scheduler-layout { display: grid; grid-template-columns: 280px 1fr; gap: 1.5rem; align-items: start; }
+@media (max-width: 768px) { .scheduler-layout { grid-template-columns: 1fr; } }
+
+.sched-selection-card { border-left: 3px solid var(--primary-blue); }
+.sched-sel-row { display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; padding: 0.3rem 0; color: var(--text-main); }
+
+/* Calendar */
+.cal-header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem; }
+.cal-header h3 { font-size: 1.1rem; }
+.cal-nav-btn { background: none; border: 1px solid #e2e8f0; border-radius: var(--radius-md); padding: 0.3rem 0.6rem; cursor: pointer; color: var(--text-muted); transition: all var(--transition-fast); }
+.cal-nav-btn:hover { border-color: var(--primary-blue); color: var(--primary-blue); }
+
+.cal-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.cal-day-label { text-align: center; font-size: 0.75rem; font-weight: 600; color: var(--text-muted); padding: 0.4rem; }
+.cal-day {
+  aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+  font-size: 0.9rem; border-radius: 50%; cursor: pointer;
+  transition: all var(--transition-fast); font-weight: 500;
+}
+.cal-day:not(.empty):not(.past):hover { background: var(--light-blue); color: var(--primary-blue); }
+.cal-day.selected { background: var(--primary-blue); color: white; }
+.cal-day.past { color: #cbd5e1; cursor: not-allowed; }
+.cal-day.empty { cursor: default; }
+
+/* Time Slots */
+.time-slots-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 0.75rem; }
+.time-slot {
+  display: flex; align-items: center; gap: 0.35rem; justify-content: center;
+  padding: 0.65rem; border-radius: var(--radius-md); border: 1.5px solid #e2e8f0;
+  background: var(--bg-color); font-size: 0.85rem; font-weight: 600;
+  font-family: var(--font-family); cursor: pointer; transition: all var(--transition-fast);
+}
+.time-slot:hover:not(:disabled) { border-color: var(--primary-blue); background: var(--light-blue); color: var(--primary-blue); }
+.time-slot.selected { border-color: var(--primary-blue); background: var(--primary-blue); color: white; }
+.time-slot.booked { background: #f1f5f9; color: #94a3b8; cursor: not-allowed; text-decoration: line-through; }
+
+/* Confirm card */
+.confirm-card { max-width: 500px; }
+.confirm-details { display: flex; flex-direction: column; gap: 0; border: 1px solid #e2e8f0; border-radius: var(--radius-md); overflow: hidden; }
+.confirm-row { display: flex; justify-content: space-between; padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9; font-size: 0.95rem; }
+.confirm-row:last-child { border-bottom: none; }
+.confirm-row span { color: var(--text-muted); }
+
+/* Success card */
+.success-card { text-align: center; max-width: 500px; padding: 3rem; }
+.success-icon { font-size: 4rem; margin-bottom: 1rem; }
+
+/* utils */
+.mt-2 { margin-top: 0.5rem; }
+.mt-4 { margin-top: 1rem; }
+.mb-4 { margin-bottom: 1rem; }
+.flex-between { display: flex; justify-content: space-between; align-items: center; }
+.link-btn { background: none; border: none; color: var(--primary-blue); font-size: 0.85rem; font-weight: 600; cursor: pointer; font-family: var(--font-family); }
+.text-muted { color: var(--text-muted); }

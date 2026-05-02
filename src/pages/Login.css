@@ -1,0 +1,156 @@
+.login-container {
+  max-width: 1000px;
+  margin: 4rem auto;
+  padding: 0 1rem;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.login-header h1 {
+  font-size: 2.5rem;
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.025em;
+}
+
+.login-subtitle {
+  color: var(--text-muted);
+  font-size: 1.25rem;
+}
+
+.login-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .login-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.login-info-panel h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.login-info-panel p {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.info-list li {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.info-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.info-list strong {
+  display: block;
+  font-size: 1.1rem;
+  margin-bottom: 0.25rem;
+}
+
+.info-list span {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  line-height: 1.4;
+  display: block;
+}
+
+.login-card {
+  padding: 2.5rem;
+}
+
+.input-group {
+  margin-bottom: 2rem;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.med-input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border: 1px solid #cbd5e1;
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  font-family: var(--font-family);
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+  outline: none;
+}
+
+.med-input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.role-selection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.role-btn {
+  padding: 1rem;
+  justify-content: flex-start;
+  gap: 1rem;
+  font-size: 1.1rem;
+  background-color: var(--bg-color);
+}
+
+.role-btn:hover {
+  background-color: var(--light-blue);
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+.role-icon {
+  color: var(--primary-blue);
+}
+
+.doctor-btn .role-icon {
+  color: var(--success);
+}
+.doctor-btn:hover {
+  background-color: #ecfdf5;
+  border-color: var(--success);
+  color: var(--success);
+}
+
+.admin-btn .role-icon {
+  color: var(--warning);
+}
+.admin-btn:hover {
+  background-color: #fffbeb;
+  border-color: var(--warning);
+  color: var(--warning);
+}

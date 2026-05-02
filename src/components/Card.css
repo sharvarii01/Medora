@@ -1,0 +1,13 @@
+.med-card {
+  background-color: var(--card-bg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1.5rem;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: box-shadow var(--transition-normal), transform var(--transition-normal);
+}
+
+.med-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}

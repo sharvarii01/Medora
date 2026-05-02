@@ -1,0 +1,227 @@
+.live-queue-container {
+  padding: 2rem 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.live-queue-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  background-color: var(--card-bg);
+  padding: 1.5rem 2rem;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.live-queue-title h1 {
+  font-size: 2.5rem;
+  color: var(--dark-blue);
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.025em;
+}
+
+.pulse-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--success);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  background-color: var(--success);
+  border-radius: 50%;
+  animation: pulse 1.5s infinite;
+}
+
+.live-queue-time {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary-blue);
+  font-variant-numeric: tabular-nums;
+}
+
+.live-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
+.live-doc-card {
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+}
+
+.doc-banner {
+  background-color: var(--primary-blue);
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.doc-banner h3 {
+  color: white;
+  margin: 0 0 0.25rem 0;
+  font-size: 1.5rem;
+}
+
+.doc-banner span {
+  font-size: 0.9rem;
+  opacity: 0.9;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.serving-section {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #f8fafc;
+}
+
+.serving-section h4 {
+  color: var(--text-muted);
+  font-size: 1rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1rem;
+}
+
+.serving-token {
+  font-size: 5rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  line-height: 1;
+}
+
+.upcoming-section {
+  padding: 1.5rem;
+  text-align: center;
+}
+
+.upcoming-section h4 {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  letter-spacing: 0.1em;
+  margin-bottom: 1.5rem;
+}
+
+.upcoming-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.upcoming-item {
+  position: relative;
+}
+
+.upcoming-token {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid var(--primary-blue);
+  color: var(--primary-blue);
+  border-radius: 50%;
+  font-size: 1.25rem;
+  font-weight: 600;
+  box-shadow: var(--shadow-sm);
+}
+
+.emg-item .upcoming-token {
+  border-color: var(--danger);
+  color: var(--danger);
+  background-color: #fef2f2;
+}
+
+.emg-badge {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  background-color: var(--danger);
+  color: white;
+  font-size: 0.6rem;
+  padding: 0.1rem 0.3rem;
+  border-radius: var(--radius-md);
+  font-weight: 700;
+  z-index: 10;
+}
+
+/* ─── Location Tabs ─── */
+.location-tabs {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1rem;
+}
+
+.location-tab {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.5rem 1.25rem;
+  border-radius: var(--radius-full);
+  border: 2px solid #e2e8f0;
+  background: var(--card-bg);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: var(--font-family);
+  transition: all var(--transition-fast);
+}
+
+.location-tab:hover {
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+.location-tab.active {
+  border-color: var(--primary-blue);
+  background: var(--primary-blue);
+  color: white;
+}
+
+/* ─── Branch Banner ─── */
+.branch-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--light-blue);
+  color: var(--primary-blue);
+  padding: 0.6rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-size: 0.95rem;
+  margin-bottom: 2rem;
+}
+
+/* ─── Serving Patient Name ─── */
+.serving-name {
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin-top: 0.5rem;
+}
+
+/* ─── Empty Location State ─── */
+.empty-location-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 5rem 0;
+  text-align: center;
+  color: var(--text-muted);
+}
+

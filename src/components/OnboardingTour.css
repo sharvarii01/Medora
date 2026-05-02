@@ -1,0 +1,106 @@
+.onboarding-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none; /* Let clicks pass through to the overlay background, but not the highlighted element */
+}
+
+/* We use a pseudo-element on the overlay to create the dimming effect, 
+   but leave a "hole" for the highlighted element using mix-blend-mode or multiple box-shadows.
+   The easiest way is a huge box-shadow on the highlight cutout. */
+
+.onboarding-highlight {
+  position: absolute;
+  border-radius: var(--radius-md);
+  box-shadow: 0 0 0 9999px rgba(15, 23, 42, 0.75);
+  pointer-events: none;
+  z-index: 9999;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: transparent;
+  border: 2px solid var(--primary-blue);
+}
+
+.onboarding-dialog {
+  position: absolute;
+  width: 320px;
+  background: var(--card-bg);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  z-index: 10000;
+  pointer-events: auto; /* Re-enable pointer events for the dialog */
+  transition: top 0.4s cubic-bezier(0.4, 0, 0.2, 1), left 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.onboarding-close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  cursor: pointer;
+  padding: 0.2rem;
+  border-radius: var(--radius-sm);
+}
+
+.onboarding-close:hover {
+  background: #f1f5f9;
+  color: var(--text-main);
+}
+
+.onboarding-step-indicator {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary-blue);
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.onboarding-title {
+  font-size: 1.2rem;
+  color: var(--text-main);
+  margin-bottom: 0.5rem;
+  margin-top: 0;
+}
+
+.onboarding-content {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  margin-bottom: 1.5rem;
+}
+
+.onboarding-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.onboarding-dots {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.onboarding-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #cbd5e1;
+  transition: background 0.3s;
+}
+
+.onboarding-dots .dot.active {
+  background: var(--primary-blue);
+  width: 16px;
+  border-radius: 4px;
+}
+
+.onboarding-next {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+}
