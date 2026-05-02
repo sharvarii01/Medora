@@ -48,9 +48,5 @@ To run the project locally:
 ## 📸 Screenshots
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/638452a5-0ec3-4ae7-badb-3117e2739bc6" />
 
-## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
-
----
-*Built with ❤️ for a better healthcare experience.*
+*Built for a better healthcare experience.*
