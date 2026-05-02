@@ -1,5 +1,7 @@
 # MedoraQueue - Enterprise Healthcare Ecosystem
 
+**🔴 LIVE DEMO: [https://medora-omega.vercel.app/](https://medora-omega.vercel.app/)**
+
 MedoraQueue is a modern, real-time healthcare management web application designed to streamline patient queuing, doctor appointments, and hospital administration. Built with a premium, responsive UI, Medora allows seamless interaction between patients, doctors, and administrative staff.
 
 ## 🚀 Features
@@ -42,5 +44,13 @@ To run the project locally:
    ```bash
    npm run dev
    ```
+
 ## 📸 Screenshots
 <img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/638452a5-0ec3-4ae7-badb-3117e2739bc6" />
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+---
+*Built with ❤️ for a better healthcare experience.*
